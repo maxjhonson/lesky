@@ -16,11 +16,9 @@ const userSchema = new mongoose.Schema({
     },
     whatsapp:{
         type:String,
-        required:true
     },
     birthday:{
         type:Date,
-        required:true
     },
     instagram:{
         type:String
