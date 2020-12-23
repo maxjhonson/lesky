@@ -33,7 +33,7 @@ router.post('/signin',async(req,res)=>{
             res.status(201).send({token});
         }
     }catch(err){
-        res.status(422).send("Error");
+        res.status(422).send(err.message);
     }
 });
 
