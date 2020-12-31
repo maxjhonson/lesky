@@ -10,7 +10,6 @@ router.post('/signup',async (req,res)=>{
     const {fullName, email, password, whatsapp, birthday,instagram} = req.body;
     try{
         const user = new User({fullName, email, password, whatsapp,birthday,instagram});
-        const a = user.validate();
         const response = await user.save();
         console.log(response)
         const token =jwt.sign({userId: user._id},secretWord);
